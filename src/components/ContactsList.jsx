@@ -1,10 +1,11 @@
 import React from 'react'
+import { connect } from 'react-redux'
 
-const ContactsList = () =>
+const ContactsList = ({ contacts }) =>
   <ul>
-    <li>Mike</li>
-    <li>Alice</li>
-    <li>Bob</li>
+    {contacts.map(c => <li>{c}</li>)}
   </ul>
 
-export default ContactsList
+export default connect(state => ({
+  contacts: state.contacts
+}))(ContactsList)

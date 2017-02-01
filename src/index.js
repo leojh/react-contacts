@@ -9,7 +9,14 @@ import { createStore, applyMiddleware } from 'redux'
 import { compose, range, fromPairs, map } from 'ramda'
 import { Provider } from 'react-redux'
 
+https://github.com/leojh/react-contacts
+
 const initialState = {
+  contacts: [
+    'Mary',
+    'Bob',
+    'Alice'
+  ]
   // contacts: compose(
   //   fromPairs,
   //   map(i => ([ shortid.generate(),  { name: faker.name.findName() }]))
